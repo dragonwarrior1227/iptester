@@ -1,3 +1,4 @@
 Flask
 selenium==4.3.0
 webdriver-manager
+pyvirtualdisplay
