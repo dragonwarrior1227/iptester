@@ -17,23 +17,23 @@ import subprocess
 app = Flask(__name__)
 
 
-# print(subprocess.Popen("npm install chromium-version@77",shell=True,stdout=subprocess.PIPE).communicate()[0])
-chrome_path=r"{}/node_modules/chromium-version/lib/chromium/chrome-linux/chrome".format(os.getcwd())
-os.environ['CHROME_PATH']=chrome_path
-binary_path=os.environ.get('CHROME_PATH')
+# # print(subprocess.Popen("npm install chromium-version@77",shell=True,stdout=subprocess.PIPE).communicate()[0])
+# chrome_path=r"{}/node_modules/chromium-version/lib/chromium/chrome-linux/chrome".format(os.getcwd())
+# os.environ['CHROME_PATH']=chrome_path
+# binary_path=os.environ.get('CHROME_PATH')
 
-path=r'tmp/chrome/chromedriver'
-# os.chmod(path, 0o777)
+# path=r'tmp/chrome/chromedriver'
+# # os.chmod(path, 0o777)
 
-options = Options()
+# options = Options()
 
-# options.binary_location =binary_path
-options.add_argument('--headless')
-options.add_argument('--no-sandbox')
-# options.add_argument("--proxy-server={}".format(py))
-options.add_argument('--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1')
-# options.add_argument("--incognito")
-# options.add_extension('vpn.crx')
+# # options.binary_location =binary_path
+# options.add_argument('--headless')
+# options.add_argument('--no-sandbox')
+# # options.add_argument("--proxy-server={}".format(py))
+# options.add_argument('--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1')
+# # options.add_argument("--incognito")
+# # options.add_extension('vpn.crx')
 
 
 @app.route('/')
