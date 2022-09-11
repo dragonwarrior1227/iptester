@@ -23,7 +23,7 @@ os.environ['CHROME_PATH']=chrome_path
 binary_path=os.environ.get('CHROME_PATH')
 
 path=r'chrome/chromedriver'
-os.chmod(path, 0o777)
+# os.chmod(path, 0o777)
 
 options = Options()
 
