@@ -42,7 +42,7 @@ def hello():
         driver = webdriver.Chrome(executable_path=path,chrome_options=options)
     except Exception as e:
         print(e)
-        driver = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=options)
+        # driver = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=options)
     print("Your Computer Name2 is:" + hostname)    
     print("Your Computer IP Address2 is:" + IPAddr)
     print(os.listdir(os.getcwd()))
