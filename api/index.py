@@ -41,14 +41,18 @@ def hello():
     try:
         driver = webdriver.Chrome(executable_path=path,chrome_options=options)
     except Exception as e:
-        print(e)
+        print("selenium browser error",e)
         # driver = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=options)
+    hostname = socket.gethostname()    
+    IPAddr = socket.gethostbyname(hostname)    
+
     print("Your Computer Name2 is:" + hostname)    
     print("Your Computer IP Address2 is:" + IPAddr)
     print(os.listdir(os.getcwd()))
     url = 'https://www.youtube.com/watch?v=ku3HSNT0I-g'
     driver.get(url)
     time.sleep(2)
+    print("success")
     driver.quit()
 
 
