@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,jsonify, request
 
 app = Flask(__name__)
 
@@ -20,6 +20,7 @@ def result():
 @app.route('/ipt')
 def get_tasks():
     if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+
         return jsonify({'ip': request.environ['REMOTE_ADDR']}), 200
     else:
         return jsonify({'ip': request.environ['HTTP_X_FORWARDED_FOR']}), 200
