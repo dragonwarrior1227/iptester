@@ -13,11 +13,10 @@ import socket
 from webdriver_manager.chrome import ChromeDriverManager
 import os,sys, stat
 import subprocess
-from pyvirtualdisplay import Display
+
 app = Flask(__name__)
 
-display = Display(visible=0, size=(800, 600))
-display.start()
+
 
 # # print(subprocess.Popen("npm install chromium-version@77",shell=True,stdout=subprocess.PIPE).communicate()[0])
 chrome_path=r"{}/node_modules/chromium-version/lib/chromium/chrome-linux/chrome".format(os.getcwd())
@@ -59,7 +58,7 @@ def hello():
     driver.quit()
 
 
-    display.stop()
+    
 
     return 'Hello, world'
 
